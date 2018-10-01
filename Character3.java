@@ -8,7 +8,6 @@ public class Character3{
 	//public static  boolean deadflg = false;
 	//public static  int i;
 
-	//キャラクターメソッド生成
 	//名前、HP,MP,攻撃力,死亡カウント、死亡フラグ
 	public Character3(String name, int hp, int mp,int hit, boolean deadcount,boolean deadflg) {
 		this.name = name;
@@ -19,7 +18,15 @@ public class Character3{
 
 	}
 
+	//引数なしのコンストラクタを記載し、オーバーロードする
+	public Character3(){
+		this.name = name;
+		this.hp = hp;
+		this.mp = mp;
+		this.hit = hit;
+		this.deadcount = deadcount;
 
+	}
 
 	/*
 	public static void rpg(String[] args) {

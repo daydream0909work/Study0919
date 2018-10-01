@@ -7,19 +7,16 @@ public class Another {
 
 	public static void main(String[] args) {
 
-		//Character3 rpgCharcter =  new Character3(null, 0, 0, 0, false, false);
 
 		//**味方チーム****************************
 		Character3[] party;
 		party= new Character3[3];
 
 
-		//rpgCharcter.hit = 10;
-
-
 		party[0] = new Character3("勇者",450,10,200,false,false);
-		party[1] = new Character3("魔女",200,30,45,false,false);
-		party[2] = new Character3("スライム",10,20,5,false,false);
+		party[1] = new Majyo("魔女",200,30,45,false,false);
+		party[1].introduce();
+		party[2] = new Monster("スライム",10,20,5,false,false);
 
 
 		//**敵チーム****************************
