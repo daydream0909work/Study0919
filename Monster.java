@@ -6,9 +6,16 @@ public class  Monster extends Character3{
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
+	//モンスター(スライム)
 	public void introduce() {
-		System.out.println(name + "の名前は魔女でござる");
+		System.out.println("ボクの名前は"+name+ "です。" );
 
+	}
+
+	//特殊な呪文攻撃
+	public void attack() {
+		super.attack();
+		System.out.println("「メラ！！」");
 	}
 
 }

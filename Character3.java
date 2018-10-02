@@ -114,16 +114,6 @@ public class Character3{
 	}
 
 
-	/*
-	protected static int random_attack(int j) {
-		//ランダムメソッドで入力する。
-		Random rnd = new Random();
-		int randomNumber_2 = rnd.nextInt(j);
-		return randomNumber_2;
-	}
-	*/
-
-
 	//引数に攻撃力を受け取り、その分hpを減らそう
 	protected void damage(int hit) {
 
@@ -143,13 +133,19 @@ public class Character3{
 		}
 	}
 
-	protected void attack(Character3 charcter) {
+	void attack(Character3 charcter) {
 
 		if(deadcount != true) {
 			System.out.println(name +"の" + hit + "の攻撃！");
 			charcter.damage(hit);
 		}
 	}
+
+	public void attack() {
+		System.out.println(name + "の攻撃魔法");
+
+	}
+
 }
 
 

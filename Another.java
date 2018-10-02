@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Another {
 
-	public static  boolean deadflg = false;
+	public static  boolean deadflg = true;
 	public static  int i;
 
 	public static void main(String[] args) {
@@ -15,8 +15,20 @@ public class Another {
 
 		party[0] = new Character3("勇者",450,10,200,false,false);
 		party[1] = new Majyo("魔女",200,30,45,false,false);
-		party[1].introduce();
 		party[2] = new Monster("スライム",10,20,5,false,false);
+
+		//魔女の自己紹介
+		party[1].introduce();
+		party[1].attack();
+		party[1].damage(10);
+		//スライムの自己紹介
+		party[2].introduce();
+		party[2].attack();
+		party[2].damage(20);
+		//勇者の自己紹介
+		//party[0].introduce();
+		//party[0].attack(party[1]);
+		//party[0].damage(15);
 
 
 		//**敵チーム****************************
