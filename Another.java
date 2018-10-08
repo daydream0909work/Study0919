@@ -13,17 +13,15 @@ public class Another {
 		party= new Character3[3];
 
 
-		party[0] = new Character3("勇者",450,10,200,false,false);
+		//party[0] = new Character3("勇者",450,10,200,false,false);
 		party[1] = new Majyo("魔女",200,30,45,false,false);
 		party[2] = new Monster("スライム",10,20,5,false,false);
 
 		//魔女の自己紹介
 		party[1].introduce();
-		party[1].attack();
 		party[1].damage(10);
 		//スライムの自己紹介
 		party[2].introduce();
-		party[2].attack();
 		party[2].damage(20);
 		//勇者の自己紹介
 		//party[0].introduce();
@@ -33,6 +31,7 @@ public class Another {
 
 		//**敵チーム****************************
 		Character3[] enemy_party = new Character3[3];
+		//インスタンス化ができない。
 		enemy_party[0] = new Character3("小ボス",100,50,30,false,false);
 		enemy_party[1] = new Character3("中ボス",500,150,50,false,false);
 		enemy_party[2] = new Character3("大ボス",1000,400,100,false,false);

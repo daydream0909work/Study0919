@@ -13,9 +13,14 @@ public class  Monster extends Character3{
 	}
 
 	//特殊な呪文攻撃
-	public void attack() {
-		super.attack();
+	public void attack(Character3 charcter) {
+		super.attack(charcter);
 		System.out.println("「メラ！！」");
+	}
+
+
+	void attack() {
+		System.out.println("「メラメラ！！」");
 	}
 
 }

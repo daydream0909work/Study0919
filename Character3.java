@@ -1,12 +1,11 @@
-public class Character3{
+abstract public class Character3{
 
 	protected String name;
+	protected String job;
 	protected int hp;
 	protected int mp;
 	protected int hit; //攻撃力
 	protected   boolean deadcount = false;
-	//public static  boolean deadflg = false;
-	//public static  int i;
 
 	//名前、HP,MP,攻撃力,死亡カウント、死亡フラグ
 	public Character3(String name, int hp, int mp,int hit, boolean deadcount,boolean deadflg) {
@@ -21,6 +20,7 @@ public class Character3{
 	//引数なしのコンストラクタを記載し、オーバーロードする
 	public Character3(){
 		this.name = name;
+		this.job = job;
 		this.hp = hp;
 		this.mp = mp;
 		this.hit = hit;
@@ -104,7 +104,8 @@ public class Character3{
 
 	*/
 
-
+	//atackメソッドは、抽象メソッドにする
+	abstract void attack();
 
 
 	//自己紹介
@@ -133,17 +134,13 @@ public class Character3{
 		}
 	}
 
+
 	void attack(Character3 charcter) {
 
 		if(deadcount != true) {
 			System.out.println(name +"の" + hit + "の攻撃！");
 			charcter.damage(hit);
 		}
-	}
-
-	public void attack() {
-		System.out.println(name + "の攻撃魔法");
-
 	}
 
 }

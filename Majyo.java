@@ -9,14 +9,20 @@ class Majyo extends Character3{
 
 	//魔女のセリフ
 	public void introduce() {
-		System.out.println("私の名前" + name + "よ！！");
+		System.out.println("私の名前は" + name + "です。！！職業は" + job + "よ。");
 
 	}
 
 	//特殊な呪文攻撃
-	public void attack() {
-		super.attack();
+	public void attack(Character3 charcter) {
+		super.attack(charcter);
 		System.out.println("「ピリカピリララ！！」");
+	}
+
+	@Override
+	void attack() {
+		// TODO 自動生成されたメソッド・スタブ
+		
 	}
 
 }
