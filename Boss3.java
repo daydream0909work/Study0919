@@ -1,12 +1,12 @@
 
-public class  Monster extends Character3{
+public class  Boss3 extends Character3{
 
-	public Monster(String name, int hp, int mp, int hit, boolean deadflg) {
+	public Boss3(String name, int hp, int mp, int hit, boolean deadflg) {
 		super(name, hp, mp, hit, deadflg);
-		this.job = "モンスター";
+		this.job = "大ボス";
 	}
 
-	//モンスター(スライム)
+	//大ボス
 	public void introduce() {
 		System.out.println("ボクの名前は"+name+ "です。" );
 
@@ -15,7 +15,7 @@ public class  Monster extends Character3{
 	//特殊な呪文攻撃
 	public void attack(Character3 charcter) {
 		super.attack(charcter);
-		System.out.println("「ファイアー！」");
+		System.out.println("「電光石火」");
 	}
 
 }

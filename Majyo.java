@@ -1,15 +1,14 @@
 
 class Majyo extends Character3{
 
-
-	public Majyo(String name, int hp, int mp, int hit, boolean deadcount, boolean deadflg) {
-		super(name, hp, mp, hit, deadcount, deadflg);
-
+	public Majyo(String name, int hp, int mp, int hit,boolean deadflg) {
+		super(name, hp, mp, hit, deadflg);
+		this.job ="勇者";
 	}
 
 	//魔女のセリフ
 	public void introduce() {
-		System.out.println("私の名前は" + name + "です。！！職業は" + job + "よ。");
+		System.out.println("私の名前は" + name + "です。！！職業は" + job + "よ！");
 
 	}
 
@@ -19,10 +18,6 @@ class Majyo extends Character3{
 		System.out.println("「ピリカピリララ！！」");
 	}
 
-	@Override
-	void attack() {
-		// TODO 自動生成されたメソッド・スタブ
-		
-	}
+	
 
 }
