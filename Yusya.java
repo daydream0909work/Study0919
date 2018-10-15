@@ -1,5 +1,5 @@
 
-class Yusya extends Character3{
+class Yusya extends Character3 implements Movable {
 
 	public Yusya(String name, int hp, int mp, int hit,boolean deadflg) {
 		super(name, hp, mp, hit, deadflg);

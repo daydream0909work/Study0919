@@ -1,5 +1,5 @@
 
-class Majyo extends Character3{
+class Majyo extends Character3 implements Movable {
 
 	public Majyo(String name, int hp, int mp, int hit,boolean deadflg) {
 		super(name, hp, mp, hit, deadflg);

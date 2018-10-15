@@ -1,5 +1,5 @@
 
-public class  Boss1 extends Character3{
+public class  Boss1 extends Character3 implements Movable{
 
 	public Boss1(String name, int hp, int mp, int hit, boolean deadflg) {
 		super(name, hp, mp, hit, deadflg);
