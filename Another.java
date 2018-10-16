@@ -6,54 +6,39 @@ public class Another {
 	static int i = 0;
 
 	public static void main(String[] args) {
-		Machibito a = new Machibito();
-
 
 		//**味方チーム****************************
-		//Character3[] party = new Character3[3];
-
-		//party[0]=  new Yusya("勇者",300,40,60,false);
-		//party[1] = new Majyo("魔女",200,30,45,false);
-		//party[2] = new Monster("スライム",10,20,5,false);
-
-		Machibito[] party = new Machibito[3];
+		Character3[] party = new Character3[3];
 		Yusya _yusya = new Yusya("勇者",300,40,60,false);
 		Majyo _majyo = new Majyo("魔女",200,30,45,false);
 		Monster _suraimu= new Monster("スライム",10,20,5,false);
 
+		party[0]=  _yusya;
+		party[1]=  _majyo;
+		party[2]=  _suraimu;
+
+
+		//自己紹介
 		//勇者
 		_yusya.introduce();
-		//_yusya.damage(10);
-
 
 		//魔女
 		_majyo.introduce();
-		//_majyo.damage(10);
 
 		//スライム
 		_suraimu.introduce();
-		//_suraimu.damage(20);
 
 
 		//**敵チーム****************************
-		//Character3[] enemy_party = new Character3[3];
-		Machibito[] enemy_party2 = new Machibito[3];
-
+		Character3[] enemy_party2 = new Character3[3];
 		Boss1 _boss1 = new Boss1("小ボス",100,50,30,false);
 		Boss2 _boss2 = new Boss2("中ボス",500,150,50,false);
 		Boss3 _boss3 = new Boss3("大ボス",1000,400,100,false);
 
-		//小ボス
-		//_boss1.damage(5);
+		enemy_party2[0]=  _boss1;
+		enemy_party2[1]=  _boss2;
+		enemy_party2[2]=  _boss3;
 
-		//中ボス
-		//_boss2.damage(10);
-
-		//大ボス
-		//_boss3.damage(15);
-
-		//a.move(party[2]);
-		//a.attack(party[0]);
 
 		//どちらかのパーティーが絶滅するまで
 		while(deadflg) {
