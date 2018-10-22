@@ -22,4 +22,7 @@ public class  Boss2 extends Character3 implements Movable {
 		System.out.println("「メラメラ！！」");
 	}
 
+	public void move() {
+		
+	}
 }

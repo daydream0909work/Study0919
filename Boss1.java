@@ -16,4 +16,8 @@ public class  Boss1 extends Character3 implements Movable{
 		super.attack(charcter);
 		System.out.println("「頭突き！！」");
 	}
+
+	public void move() {
+
+	}
 }
