@@ -17,8 +17,8 @@ class Yusya extends Character3 implements Movable {
 		System.out.println("「メラ！！」");
 	}
 
-	public void move() {
-
+	public void move(Movable party){
+		attack((Character3)party);
 	}
 
 

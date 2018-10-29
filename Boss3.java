@@ -17,9 +17,10 @@ public class  Boss3 extends Character3 implements Movable {
 		super.attack(charcter);
 		System.out.println("「電光石火」");
 	}
-	
-	public void move() {
-		
+
+	void move(Movable party){
+		attack((Character3)party);
 	}
+
 
 }

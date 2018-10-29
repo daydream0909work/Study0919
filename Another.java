@@ -8,50 +8,57 @@ public class Another {
 	public static void main(String[] args) {
 
 		//**味方チーム****************************
-		//Character3[] party = new Character3[3];
 		Movable[] party = new Movable[3]; //Movable型に変更
-		Machibito _machibito = new Machibito(); //MachibitoのインスタンスをMovable型に変換
 
-		//moveメソッドが呼べることを確認
-		_machibito.move((Movable)_machibito);
+		for(int k = 0; k < party.length; k++) {
+			party[k] = new Machibito();
+		}
 
 		Yusya _yusya = new Yusya("勇者",300,40,60,false);
 		Majyo _majyo = new Majyo("魔女",200,30,45,false);
 		Monster _suraimu= new Monster("スライム",10,20,5,false);
 
-		party[0]=  _yusya;
-		party[1]=  _majyo;
-		party[2]=  _suraimu;
-
+		/*
+		party[0].move(_yusya);
+		party[1].move(_majyo);
+		party[2].move(_suraimu);
+		*/
 
 		//自己紹介
 		//勇者
 		_yusya.introduce();
-
 		//魔女
 		_majyo.introduce();
-
 		//スライム
 		_suraimu.introduce();
 
 
 		//**敵チーム****************************
-		//Character3[] enemy_party2 = new Character3[3];
-		Movable[] enemy_party2 = new Movable[3]; //Movable型に変更
+		Movable[] enemy_party = new Movable[3];
+
+		enemy_party[0] =  new Machibito();
+
+
+		for(int k = 0; k < party.length; k++) {
+			enemy_party[k] = new Machibito();
+		}
 
 		Boss1 _boss1 = new Boss1("小ボス",100,50,30,false);
 		Boss2 _boss2 = new Boss2("中ボス",500,150,50,false);
 		Boss3 _boss3 = new Boss3("大ボス",1000,400,100,false);
 
-		enemy_party2[0]=  _boss1;
-		enemy_party2[1]=  _boss2;
-		enemy_party2[2]=  _boss3;
+		/*
+		enemy_party[0].move(_boss1);
+		enemy_party[1].move(_boss2);
+		enemy_party[2].move(_boss3);
+		*/
 
 		//どちらかのパーティーが絶滅するまで
 		while(deadflg) {
 
 			//敵、味方交代ずつ、攻撃する
 			if(i%2 == 0) {
+
 				if(_yusya.deadflg == true && _majyo.deadflg == true && _suraimu.deadflg == true) {
 					System.out.println("勇者チームが全滅した！");
 					deadflg = false;
@@ -68,38 +75,36 @@ public class Another {
 					int number = random_attack(3);
 
 						//1だったら敵１に攻撃
-						if(number == 0 && !_yusya.deadflg) {
+						if(number == 0 && !_boss1.deadflg){
+						//if(!enemy_party[number].deadflg)party[j].move(enemy_party[number]){
 							//party[j].attack(_boss1);
 							party[j].move(_boss1);
 						//2だったら敵2に攻撃
- 						}else if(number == 1 && !_majyo.deadflg){
+ 						}else if(number == 1 && !_boss2.deadflg){
 							//party[j].attack(_boss2);
  							party[j].move(_boss2);
 						//3だったら敵3に攻撃
-						}else if(number == 2 && !_suraimu.deadflg){
+						}else if(number == 2 && !_boss3.deadflg){
 							//party[j].attack(_boss3);
 							party[j].move(_boss3);
 						}
 					}
 
-			}else {
+				}else {
 					//敵チーム
-					for(int k = 0; k < enemy_party2.length; k++) {
+					for(int k = 0; k < enemy_party.length; k++) {
 						//3人チームなので
 						int number = random_attack(3);
 						//1だったら敵１に攻撃
 						if(number == 0 && !_yusya.deadflg) {
-							//enemy_party2[k].attack(_yusya);
-							enemy_party2[k].move(_yusya);
+							enemy_party[k].move(_yusya);
 						//2だったら敵2に攻撃
 						}else if(number == 1 && !_majyo.deadflg){
-							//enemy_party2[k].attack(_majyo);
-							enemy_party2[k].move(_majyo);
+							enemy_party[k].move(_majyo);
 						//3だったら敵3に攻撃
 						}else if(number == 2 && !_suraimu.deadflg){
-							//enemy_party2[k].attack(_suraimu);
-							enemy_party2[k].move(_majyo);
-					}
+							enemy_party[k].move(_majyo);
+						}
 				}
 			}
 

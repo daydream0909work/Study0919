@@ -1,6 +1,7 @@
 
 public interface Movable	 {
-	default void move(Movable party){
+	default void move(Character3 party){
 		System.out.println("弾を撃つぞ！");
+		}
+
 	}
-}

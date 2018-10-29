@@ -18,9 +18,9 @@ class Majyo extends Character3 implements Movable {
 		System.out.println("「ピリカピリララ！！」");
 	}
 
-	//オーバライド
-	public void Move() {
-
+	void move(Movable party){
+		attack((Character3)party);
 	}
+
 
 }

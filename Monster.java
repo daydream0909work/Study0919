@@ -18,9 +18,9 @@ public class  Monster extends Character3 implements Movable {
 		System.out.println("「ファイアー！」");
 	}
 
-	//オーバライド
-	public void Move() {
-
+	public void move(Movable party){
+		attack((Character3)party);
 	}
+
 
 }

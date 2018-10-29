@@ -4,6 +4,7 @@ public class  Boss2 extends Character3 implements Movable {
 	public Boss2(String name, int hp, int mp, int hit, boolean deadflg) {
 		super(name, hp, mp, hit, deadflg);
 		this.job = "中ボス";
+		this.deadflg = false;
 	}
 
 	//中ボス
@@ -22,7 +23,8 @@ public class  Boss2 extends Character3 implements Movable {
 		System.out.println("「メラメラ！！」");
 	}
 
-	public void move() {
-		
+	void move(Movable party){
+		attack((Character3)party);
 	}
+
 }
