@@ -1,6 +1,7 @@
 
 class Majyo extends Character3 implements Movable {
-
+	
+	
 	public Majyo(String name, int hp, int mp, int hit,boolean deadflg) {
 		super(name, hp, mp, hit, deadflg);
 		this.job ="勇者";
@@ -15,12 +16,15 @@ class Majyo extends Character3 implements Movable {
 	//特殊な呪文攻撃
 	public void attack(Character3 charcter) {
 		super.attack(charcter);
-		System.out.println("「ピリカピリララ！！」");
+		//System.out.println("「ピリカピリララ！！」");
 	}
 
-	void move(Movable party){
+
+	@Override
+	public void move(Character3 party){
 		attack((Character3)party);
 	}
+
 
 
 }

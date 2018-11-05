@@ -74,21 +74,25 @@ public class Another {
 					//3人チームなので
 					int number = random_attack(3);
 
-						//1だったら敵１に攻撃
-						if(number == 0 && !_boss1.deadflg){
-						//if(!enemy_party[number].deadflg)party[j].move(enemy_party[number]){
-							//party[j].attack(_boss1);
-							party[j].move(_boss1);
-						//2だったら敵2に攻撃
- 						}else if(number == 1 && !_boss2.deadflg){
-							//party[j].attack(_boss2);
- 							party[j].move(_boss2);
-						//3だったら敵3に攻撃
-						}else if(number == 2 && !_boss3.deadflg){
-							//party[j].attack(_boss3);
-							party[j].move(_boss3);
+					//1だったら敵１に攻撃
+					if(number == 0 && !_boss1.deadflg){
+						if(enemy_party[number] instanceof Character3){
+							party[j].move((Character3)enemy_party[number]);
 						}
+						//2だったら敵2に攻撃
+ 					}else if(number == 1 && !_boss2.deadflg){
+
+ 						if(enemy_party[number] instanceof Character3){
+							party[j].move((Character3)enemy_party[number]);
+						}
+						//3だったら敵3に攻撃
+					}else if(number == 2 && !_boss3.deadflg){
+						if(enemy_party[number] instanceof Character3){
+							party[j].move((Character3)enemy_party[number]);
+						}
+
 					}
+				}
 
 				}else {
 					//敵チーム
@@ -97,13 +101,19 @@ public class Another {
 						int number = random_attack(3);
 						//1だったら敵１に攻撃
 						if(number == 0 && !_yusya.deadflg) {
-							enemy_party[k].move(_yusya);
+							if(enemy_party[number] instanceof Character3){
+								enemy_party[k].move((Character3)party[number]);
+							}
 						//2だったら敵2に攻撃
 						}else if(number == 1 && !_majyo.deadflg){
-							enemy_party[k].move(_majyo);
+							if(enemy_party[number] instanceof Character3){
+								enemy_party[k].move((Character3)enemy_party[number]);
+							}
 						//3だったら敵3に攻撃
 						}else if(number == 2 && !_suraimu.deadflg){
-							enemy_party[k].move(_majyo);
+							if(enemy_party[number] instanceof Character3){
+								enemy_party[k].move((Character3)enemy_party[number]);
+							}
 						}
 				}
 			}

@@ -17,10 +17,12 @@ public class  Boss3 extends Character3 implements Movable {
 		super.attack(charcter);
 		System.out.println("「電光石火」");
 	}
-
-	void move(Movable party){
+	
+	@Override
+	public void move(Character3 party){
 		attack((Character3)party);
 	}
+
 
 
 }

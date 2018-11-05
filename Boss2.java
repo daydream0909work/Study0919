@@ -23,7 +23,8 @@ public class  Boss2 extends Character3 implements Movable {
 		System.out.println("「メラメラ！！」");
 	}
 
-	void move(Movable party){
+	@Override
+	public void move(Character3 party){
 		attack((Character3)party);
 	}
 
